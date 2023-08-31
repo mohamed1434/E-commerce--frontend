@@ -22,9 +22,9 @@ const Image = styled.img`
 `;
 
 const HoverBox = styled(Box)`
-  width: 24vw;
-  height: 60vh;
-  background-color: #d7d5ce;
+  width: 100%; //24vw
+  height: 100%; //60vh
+  background-color: #d7d5ce; // #d7d5ce
   border-radius: 40px;
   transition: opacity 0.3s, transform 0.3s;
 
@@ -56,6 +56,10 @@ const OutLinedButton = styled(Button)(({ theme }) => ({
   border: "1px solid white",
 }));
 
+const ImageContainer = styled.div`
+${mobile({width: "40vw", height: "100%", position: "relative"})}
+`;
+
 const SmallProduct = ({ colors, imgs, text, price, type }) => {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [isHovered, setIsHovered] = useState(false);
@@ -83,14 +87,14 @@ const SmallProduct = ({ colors, imgs, text, price, type }) => {
         height: type === "products" ? "70vh" : "60vh", //70vh
         padding: type === "products" ? "20px" : "50px", //20px
         [theme.breakpoints.down("sm")]: {
-          height: "20vh",
+          height: "20vh", //20vh
           // backgroundColor: "orange",
           width: "30vw",
           //   height: "50%",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          marginBottom: "4rem",
+          marginBottom: "10rem",
           padding: "30px"
         },
       }}
@@ -100,11 +104,12 @@ const SmallProduct = ({ colors, imgs, text, price, type }) => {
         spacing={2}
         sx={{
           [theme.breakpoints.down("sm")]: {
-            height: "30vh",
-            width: "50vw",
+            height: "40vh", //30vh
+            width: "50vw", //50vw
             display: "flex",
             alignItems: "center",
             marginBottom: "4rem",
+            // backgroundColor: "red"
           },
         }}
       >
@@ -112,7 +117,9 @@ const SmallProduct = ({ colors, imgs, text, price, type }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+        <ImageContainer>
           <Image src={`${selectedImage}.png`} isHovered={isHovered} />
+        </ImageContainer>
           {isHovered && (
             <Stack
               direction="column"

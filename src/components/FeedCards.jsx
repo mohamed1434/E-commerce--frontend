@@ -110,6 +110,7 @@ const FeedCards = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              height: "100vh", //remove if goes wrong for other screens
             },
           }}
           justifyContent="center"

@@ -159,7 +159,7 @@ const Navbar = () => {
             alignItems="center"
             spacing={2}
           >
-          {window.innerWidth < 414 ? (
+          {window.innerWidth < 786 ? (
               <>
                 <Link
                   component={RouterLink}

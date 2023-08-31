@@ -5,6 +5,15 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { ArrowDown, List, Plus, SortAscending } from "phosphor-react";
 import { Divider, Stack, useTheme } from "@mui/material";
+import { styled as styledComp } from "styled-components";
+
+const PTag = styledComp.p`
+font-size: 12px;
+overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 7rem;
+`;
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -92,11 +101,11 @@ const CustomMenu = () => {
           },
           [theme.breakpoints.down("sm")]: {
             width: "10rem",
-            marginLeft: "1rem"
+            marginLeft: "1rem",
           },
         }}
       >
-        <p>{`Sort by: ${selectedOption}`}</p>
+        <PTag>{`Sort by: ${selectedOption}`}</PTag>
         <List size={24} />
       </Button>
       <StyledMenu

@@ -6,7 +6,7 @@ const Border = styled.div`
   padding: 10px;
 `;
 
-const Text = styled.span`
+const Text = styled.div`
   border: 2px solid black;
   border-radius: 50px;
   padding: 4px 20px;

@@ -20,12 +20,14 @@ ${mobile({fontSize: "40px", paddingLeft: "10px"})}
 `;
 
 const Home = () => {
-  const limitedCardItems = cardItems.slice(0, 6);
+  const limitedCardItems = window.innerWidth < 786 ? cardItems.slice(0, 3) : cardItems.slice(0, 6);
   return (
     <>
       <Announcement />
       <Navbar />
       <FeedCards />
+      <br/>
+      <br/>
       <SiteDesc />
       <Stack justifyContent="center" sx={{ width: "100%" }} alignItems="center">
         <h1 style={{ fontSize: "40px" }}>SHOP BY ESSENTIALS</h1>

@@ -8,7 +8,7 @@ import { Box, Divider, Stack, useTheme } from "@mui/material";
 import { mobile } from "../utils/responsive";
 import { styled as styledComp } from "styled-components";
 
-const PTag = styledComp.div`
+const PTag = styledComp.p`
 font-size: 12px;
 `;
 
@@ -107,7 +107,7 @@ const CustomSelect = ({ categories, selectedCategory, onCategoryChange }) => {
             backgroundColor: "black", // Change to the desired hovering color
           },
           [theme.breakpoints.down("sm")]: {
-            width: "8rem",
+            width: "10rem",
           },
         }}
       >

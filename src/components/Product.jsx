@@ -85,7 +85,7 @@ const Product = ({ colors, imgs, text, price, type }) => {
         [theme.breakpoints.down("sm")]: {
           // height: "20vh",
           // backgroundColor: "orange",
-          width: "70%",
+          width: "54%", //70%
           height: "100%",
           display:"flex",
           justifyContent: "center",
