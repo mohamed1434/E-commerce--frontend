@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   /* background-color: red; */
-  ${mobile({ height: "20vh", marginBottom: "4rem" })}
+  ${mobile({ height: "20vh", marginBottom: "4rem", marginTop: "12rem" })}
 `;
 
 const TextContainer = styled.div`
